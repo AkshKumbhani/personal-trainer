@@ -1,0 +1,29 @@
+{
+  "name": "personal-trainer",
+  "version": "1.0.0",
+  "description": "Full stack Node.js project for Personal Trainer website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed:products": "node scratch/seed_static_products.js",
+    "setup:database": "node scratch/bootstrap_database.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "google-auth-library": "^10.6.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.2.0",
+    "mysql2": "^3.19.1",
+    "nodemailer": "^9.0.5",
+    "stripe": "^22.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

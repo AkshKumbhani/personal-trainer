@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist - Personal Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="top-offer">
+    10% Discount On The First Order In Dietary!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar fixed-header">
+    <div class="container-fluid">
+      <!-- LEFT SIDE: LOGO + NAV LINKS -->
+      <div class="nav-left-section">
+        <a class="navbar-brand logo-text" href="index.html">
+          <div>TRAINER</div>
+          <div class="logo-sub">PERSONAL</div>
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav nav-links-left ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#membership">PLANS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#trainers">TRAINERS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-right-section">
+        <ul class="navbar-nav nav-links-right">
+         
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="login.html">Log in</a></li>
+              <li><a class="dropdown-item" href="register.html">Create Account</a></li>
+              <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+              <li><a class="dropdown-item" href="#">Compare</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="appointment.html" class="btn btn-book">
+              BOOK HERE <span class="arrow-box"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="cart-link" id="cartTrigger">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- WISHLIST HERO -->
+  <section class="wishlist-hero">
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <div class="back-circle"><i class="fa-solid fa-arrow-left"></i></div>
+        <span>Back to home</span>
+      </a>
+      <h1>WISHLIST</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+    </div>
+  </section>
+
+  <!-- WISHLIST SECTION -->
+  <section class="wishlist-section">
+    <div class="container">
+      <h2 class="wishlist-item-count" id="wishlistItemCount">WISHLIST (0)</h2>
+      
+      <div id="wishlistContainer" class="wishlist-table-container">
+        <!-- Wishlist table will be dynamically loaded here by script.js -->
+        <div class="empty-wishlist-msg">
+            <h2>Your wishlist is empty.</h2>
+            <a href="index.html" class="btn-account">Back to Shop <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="clear-all-container" id="clearAllSection" style="display: none;">
+        <button class="clear-all-btn" onclick="clearWishlist()">CLEAR ALL</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIPTION FOOTER -->
+  <section class="subscription-footer">
+    <div class="container-fluid">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <p class="best-online">BEST ONLINE</p>
+          <h2 class="brand-title">PERSONAL <span class="trainer-badge">TRAINER</span><br>SUBSCRIPTION</h2>
+          <p class="free-trial">Join now for <span>7 days FREE</span> trial</p>
+          <div class="subscribe-box">
+            <input type="email" placeholder="Enter email address...">
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop:</h4>
+          <ul>
+            <li>Search</li>
+            <li><a href="collections.html" style="color:inherit; text-decoration:none;">All Collections</a></li>
+            <li>All Products</li>
+            <li>Compare</li>
+            <li><a href="wishlist.html" style="color:inherit; text-decoration:none;">Wishlist</a></li>
+            <li><a href="cart.html" style="color:inherit; text-decoration:none;">My Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account:</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Faq's</li>
+            <li>Services</li>
+            <li>Shipping & Delivery</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Share :</h4>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026, Personaltrainer WorkDo, Powered by WorkDo.io</p>
+        <div class="payment-icons">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+          <img src="https://www.pymnts.com/wp-content/uploads/2014/03/Discover-logo-e1416429693676.jpg" alt="Discover">
+          <img src="https://images.icon-icons.com/2341/PNG/512/diners_payment_method_card_icon_142742.png" alt="RuPay">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Overlay & Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2>My Cart</h2>
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <span class="item-count" id="drawerItemCount">0 ITEMS</span>
+        <span class="cart-drawer-close" id="closeCart">&times;</span>
+      </div>
+    </div>
+    <div class="shipping-notice">
+      <p id="shippingNotice">Spend Rs. 5,000.00 more to enjoy FREE Shipping</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="shippingProgress" style="width: 0%"></div>
+        <div class="delivery-icon"><i class="fa-solid fa-truck"></i></div>
+      </div>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerBody">
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-totals">
+        <div class="total-item-group">
+          <span class="total-item-label">Total Item</span>
+          <div class="total-item-val" id="drawerTotalItems">0</div>
+        </div>
+        <div class="subtotal-group" style="text-align: right;">
+          <span class="subtotal-label">Subtotal</span>
+          <div class="subtotal-val" id="drawerSubtotal">Rs. 0.00 INR</div>
+        </div>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="cart.html" class="btn-view-cart">View Cart</a>
+        <a href="cart.html" class="btn-checkout">Proceed to checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

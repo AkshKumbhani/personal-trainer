@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Trainer </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css?v=2">
+</head>
+
+<body>
+  <div class="top-offer">
+    10% Discount On The First Order In Dietary!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar fixed-header">
+
+    <div class="container-fluid">
+
+      <!-- LEFT SIDE: LOGO + NAV LINKS -->
+      <div class="nav-left-section">
+        <!-- LOGO -->
+        <a class="navbar-brand logo-text" href="#">
+          <div>TRAINER</div>
+          <div class="logo-sub">PERSONAL</div>
+        </a>
+
+        <!-- MOBILE TOGGLE -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- LEFT NAV LINKS -->
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav nav-links-left ms-auto">
+
+            <!-- PLANS -->
+            <li class="nav-item">
+              <a class="nav-link" href="#membership">PLANS</a>
+            </li>
+
+            <!-- COLLECTIONS -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="collections.html" data-bs-toggle="dropdown">COLLECTIONS</a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-grid">
+                  <a href="cross-trainer.html" class="mega-item">
+                    <img src="images\colection images\c1.jpg">
+                    <span>CROSS TRAINER</span>
+                  </a>
+                  <a href="gym-equipment.html" class="mega-item">
+                    <img src="images\colection images\c2.jpg">
+                    <span>GYM EQUIPMENT</span>
+                  </a>
+                  <a href="protein-powder.html" class="mega-item">
+                    <img src="images\colection images\c3.jpg">
+                    <span>PROTEIN POWDER</span>
+                  </a>
+                  <a href="treadmills.html" class="mega-item">
+                    <img src="images\colection images\c4.jpg">
+                    <span>TREADMILLS</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- PAGES -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">PAGES</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">FAQ's</a></li>
+                <li><a class="dropdown-item" href="#">Services</a></li>
+                <li><a class="dropdown-item" href="#">Shipping & Delivery</a></li>
+                <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+              </ul>
+            </li>
+
+            <!-- BLOG -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">BLOG</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Blog Page</a></li>
+                <li><a class="dropdown-item" href="#">Article Page</a></li>
+              </ul>
+            </li>
+
+            <!-- TRAINERS -->
+            <li class="nav-item">
+              <a class="nav-link" href="#trainers">TRAINERS</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-right-section">
+        <ul class="navbar-nav nav-links-right">
+
+          <!-- ACCOUNT -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" id="userMenu">
+              <li id="adminLink" style="display: none;"><a class="dropdown-item" href="admin.html"
+                  style="color: var(--accent); font-weight: bold;">Admin Panel</a></li>
+              <li>
+                <hr class="dropdown-divider admin-divider" style="display: none;">
+              </li>
+              <li class="guest-only"><a class="dropdown-item" href="login.html">Log in</a></li>
+              <li class="guest-only"><a class="dropdown-item" href="register.html">Create Account</a></li>
+              <li class="user-only" style="display: none;"><a class="dropdown-item" href="#" id="logoutBtn">Log out</a>
+              </li>
+              <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+              <li><a class="dropdown-item" href="#">Compare</a></li>
+            </ul>
+          </li>
+
+          <!-- BOOK BUTTON -->
+          <li class="nav-item">
+            <a href="appointment.html" class="btn btn-book">
+              BOOK HERE <span class="arrow-box"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <!-- CART ICON -->
+          <li class="nav-item">
+            <a href="#" class="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content">
+
+          <span class="hero-tag">BEST ONLINE</span>
+
+          <h1 class="hero-title">
+            PERSONAL
+            <span class="trainer-badge">TRAINER</span><br>
+            SUBSCRIPTION
+          </h1>
+
+          <p class="hero-text">
+            No matter your fitness level or goals
+          </p>
+
+          <p class="hero-desc">
+            Welcome to the world of personalized fitness guidance and motivation!
+            Our personal trainer theme is designed to empower and inspire
+            individuals to reach their fitness goals, regardless of their
+            current fitness level.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="appointment.html" class="btn btn-read">READ MORE</a>
+            <a href="#" class="btn btn-watch">
+              WATCH TRIAL TRAINING
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="training-section">
+    <h1 class="section-title">PERSONAL TRAININGS</h1>
+
+    <div class="training-wrapper">
+      <button class="nav-btn left">←</button>
+
+      <div class="training-container" id="dynamicTrainingContainer">
+        <!-- Dynamic trainers will be injected here -->
+      </div>
+
+      <button class="nav-btn right">→</button>
+    </div>
+  </section>
+  <!-- MEMBERSHIP SUBSCRIPTION SECTION -->
+  <section class="membership-subscription" id="membership">
+    <div class="membership-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="membership-text">
+        <h1>MEMBERSHIP<br>SUBSCRIPTION</h1>
+
+        <p class="trial-text">
+          Join now for <span>7 days FREE</span> trial
+        </p>
+
+        <p class="description">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less.
+        </p>
+
+        <a href="about-us.html" class="read-more-btn">
+          READ MORE ⟶
+        </a>
+      </div>
+
+      <!-- RIGHT CARDS -->
+      <div class="membership-cards" id="dynamicPlansContainer">
+        <!-- Dynamic plans will be injected here -->
+      </div>
+    </div>
+  </section>
+  <!-- VIDEO STYLE SECTION WITH SIDE TEXT + SLIDER -->
+  <section class="video-style-section">
+
+    <!-- SIDE CONTENT (TOP RIGHT) -->
+    <div class="section-content">
+
+      <!-- HEADING FIRST -->
+      <h2>
+        MEDICALERRORS<br>
+        LITIGATIONS
+      </h2>
+
+      <!-- SPAN BELOW HEADING -->
+      <span class="small-tag" style="text-align: right; display: block;">
+        HIIT (High-Intensity Interval Training) workouts
+      </span>
+
+      <p>
+        Welcome to the world of personalized fitness guidance and motivation.
+        Our training programs are designed to empower individuals to reach
+        their fitness goals regardless of experience level.
+      </p>
+
+      <div class="video-buttons">
+        <a href="about-us.html" class="btn-read-more">READ MORE <i class="fa-solid fa-square-arrow-up-right"></i></a>
+        <a href="#" class="btn-watch-trial">WATCH TRIAL TRAINING <i class="fa-solid fa-circle-play"></i></a>
+      </div>
+
+    </div>
+
+    <!-- CARD SLIDER -->
+    <div class="slider-wrapper">
+      <div class="slider-track">
+
+        <!-- CARD 1 -->
+        <div class="testimonial-card">
+          <div class="card-image"
+            style="background-image:url('//personaltrainer-workdo.myshopify.com/cdn/shop/files/review-img-3.png?v=1684925690');">
+          </div>
+          <div class="card-content">
+            <div class="rating">★★★★★ <span>4.1</span></div>
+            <h3>Excellent work</h3>
+            <p>I've been practicing yoga for over 10 years now, and it's one of the best decisions I've ever made...</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg">
+              <span>Emily, Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 (HIGHLIGHT) -->
+        <div class="testimonial-card highlight">
+          <div class="card-image"
+            style="background-image:url('//personaltrainer-workdo.myshopify.com/cdn/shop/files/review-img-3_0ceb225f-ad33-438e-92b2-160d0f7485f0.png?v=1686026487');">
+          </div>
+          <div class="card-content">
+            <div class="rating">★★★★★ <span>4.1</span></div>
+            <h3>Marvelous!</h3>
+            <p>Yoga has helped me to become stronger, more flexible, and more centered. It's also helped...</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg">
+              <span>Jennifer, Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="testimonial-card">
+          <div class="card-image"
+            style="background-image:url('//personaltrainer-workdo.myshopify.com/cdn/shop/files/review-img-4.png?v=1684925690');">
+          </div>
+          <div class="card-content">
+            <div class="rating">★★★★★ <span>4.1</span></div>
+            <h3>Wonderful!</h3>
+            <p>I'm not a very athletic person, but I've found that yoga is a great way for me to get exercise...</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg">
+              <span>William, Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="testimonial-card">
+          <div class="card-image"
+            style="background-image:url('//personaltrainer-workdo.myshopify.com/cdn/shop/files/review-img-4_93930adc-9223-46f0-9aec-9965ba396167.png?v=1686026533');">
+          </div>
+          <div class="card-content">
+            <div class="rating">★★★★★ <span>4.1</span></div>
+            <h3>Fantastic!</h3>
+            <p>I love the way yoga helps me to connect with my body and my breath. It's also a great way...</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/22.jpg">
+              <span>Jane, Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="testimonial-card highlight">
+          <div class="card-image"
+            style="background-image:url('//personaltrainer-workdo.myshopify.com/cdn/shop/files/review-img-1.png?v=1684925690');">
+          </div>
+          <div class="card-content">
+            <div class="rating">★★★★★ <span>4.1</span></div>
+            <h3>Terrific work</h3>
+            <p>I started yoga to help with my back pain, but I quickly realized how much it was helping me...</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/55.jpg">
+              <span>Mary, Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="testimonial-card">
+          <div class="card-image"
+            style="background-image:url('//personaltrainer-workdo.myshopify.com/cdn/shop/files/review-img-2.png?v=1684925691');">
+          </div>
+          <div class="card-content">
+            <div class="rating">★★★★★ <span>4.1</span></div>
+            <h3>Outstanding</h3>
+            <p>I feel more relaxed and at peace, and I have more energy. I'm also sleeping better than I...</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg">
+              <span>David, Client</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+  </section>
+  <!-- POWER & STRENGTH SECTION -->
+  <section class="power-section">
+
+    <div class="power-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="power-left">
+        <h1>POWER & STRENGTH</h1>
+
+        <h4>Experienced cardio instructor provides instruction.</h4>
+
+        <p>
+          No matter your fitness level or goals, our cardio workouts are adaptable
+          to suit your needs. Our trainers provide modifications and progressions,ensuring that you can challengs
+          yourself at the right intensity and progress at a pace that is comfortable for you.
+        </p>
+
+        <ul class="power-list">
+          <li><i class="fa-solid fa-circle-right"></i> Lose unnecessary kilograms.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Increase endurance and strength.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Gain new energy and willingness to train.</li>
+        </ul>
+
+        <a href="about-us.html" class="btn-read-more-dashed">
+          READ MORE <span class="arrow-box"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="power-right">
+
+        <!-- CARD -->
+        <div class="power-card">
+          <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/002.png?v=1686026624" alt="">
+          <div class="card-content">
+            <span>BEST ONLINE</span>
+            <h3>Kettlebell swings</h3>
+            <p>
+              In our yoga studio, you will find a sense of community and support.
+            </p>
+            <a href="performance-training.html" class="btn-read-more-double">READ MORE <i
+                class="fa-solid fa-angles-right"></i></a>
+          </div>
+        </div>
+
+        <!-- VIDEO IMAGE -->
+        <div class="video-box">
+          <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="">
+          <a href="#video-popup" class="play-btn-circle">
+            <i class="fa-solid fa-circle-play"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO POPUP -->
+  <div id="video-popup" class="video-modal">
+    <div class="video-inner">
+      <a href="#" class="close-btn">×</a>
+      <video controls autoplay>
+        <source src="https://cdn.shopify.com/videos/c/o/v/5b7e0487474e49ffa521c9c7372093f8.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <section class="trainer-section" id="trainers">
+    <div class="trainer-inner">
+
+      <!-- LEFT : VIDEO -->
+      <div class="trainer-video">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Medicine ball exercise">
+        <a href="#video-popup" class="play-btn-circle">
+          <i class="fa-solid fa-circle-play"></i>
+        </a>
+      </div>
+
+      <!-- CENTER : IMAGE + TEXT -->
+      <div class="trainer-card" id="dynamicTrainerCard">
+        <!-- Dynamic main trainer info will be injected here -->
+      </div>
+
+      <!-- RIGHT : CONTENT -->
+      <div class="trainer-content">
+        <h2>YOGA & PILATES</h2>
+        <h4>Medicine ball exercises</h4>
+
+        <p>
+          Active individuals have a lower risk of developing chronic conditions such as
+          type 2 diabetes, certain types of cancer, and metabolic syndrome.
+        </p>
+
+        <ul>
+          <li><i class="fa-solid fa-circle-right"></i> Improved cardiovascular health.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Enhanced flexibility and balance.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Boosted mood and mental well-being.</li>
+        </ul>
+
+        <a href="about-us.html" class="btn-read-more-dashed">
+          READ MORE <span class="arrow-box"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- OUR PARTNER SECTION -->
+    <section class="partner-section">
+
+      <h2 class="partner-title">OUR PARTNER</h2>
+
+      <div class="partner-slider">
+        <div class="partner-track">
+
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+          <!-- duplicate for smooth infinite scroll -->
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+          <div class="partner-item">
+            <span class="brand-main">TRAINER</span>
+            <span class="brand-sub">PERSONAL</span>
+          </div>
+
+        </div>
+      </div>
+
+
+    </section>
+    <section class="articles-section" id="articles">
+
+      <!-- HEADER -->
+      <div class="articles-header">
+        <h2>INTERESTING ARTICLES</h2>
+        <p>
+          As you move through various yoga postures (asanas), you will learn to
+          synchronise your breath with your movements, creating a graceful and
+          meditative flow.
+        </p>
+      </div>
+
+      <!-- SLIDER -->
+      <div class="articles-wrapper">
+
+        <!-- LEFT BUTTON -->
+        <a href="#card1" class="nav-btn left">❮</a>
+
+        <div class="articles-container">
+
+          <!-- CARD 1 -->
+          <article class="article-card" id="card1">
+            <div class="article-img">
+              <span class="date">25 May 2023</span>
+              <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/articles/2.png?v=1684993648" alt="">
+            </div>
+            <div class="article-body">
+              <span class="category">Fitness</span>
+              <h3>Super Training For Fit Flex</h3>
+              <p>Mental strength encompasses resilience, perseverance...</p>
+              <a href="performance-training.html" class="btn">SHOW SERVICES →</a>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="article-card" id="card2">
+            <div class="article-img">
+              <span class="date">24 May 2023</span>
+              <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/articles/1.png?v=1684993508" alt="">
+            </div>
+            <div class="article-body">
+              <span class="category">Fitness</span>
+              <h3>Be health with sufficient...</h3>
+              <p>Regular exercise and proper nutrition contribute...</p>
+              <a href="performance-training.html" class="btn">SHOW SERVICES →</a>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="article-card" id="card3">
+            <div class="article-img">
+              <span class="date">25 May 2023</span>
+              <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/articles/5.png?v=1684993820" alt="">
+            </div>
+            <div class="article-body">
+              <span class="category">Fitness</span>
+              <h3>Performance Training</h3>
+              <p>Power encompasses physical and mental strength...</p>
+              <a href="performance-training.html" class="btn">READ MORE →</a>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="article-card" id="card4">
+            <div class="article-img">
+              <span class="date">25 May 2023</span>
+              <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/articles/4.png?v=1684993773" alt="">
+            </div>
+            <div class="article-body">
+              <span class="category">Fitness</span>
+              <h3>Fine Casualwear...</h3>
+              <p>The pursuit of power and strength should be balanced...</p>
+              <a href="fine-casualwear-collective.html" class="btn">READ MORE →</a>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="article-card" id="card5">
+            <div class="article-img">
+              <span class="date">25 May 2023</span>
+              <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/articles/3.png?v=1684993727" alt="">
+            </div>
+            <div class="article-body">
+              <span class="category">Fitness</span>
+              <h3>Ultimate Fit Lifestyle</h3>
+              <p>Step into vibrant and dynamic training environment...</p>
+              <a href="performance-training.html" class="btn">SHOW SERVICES →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- RIGHT BUTTON -->
+        <a href="#card5" class="nav-btn right">❯</a>
+
+      </div>
+    </section>
+    <section class="subscription-section">
+      <div class="subscription-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="subscription-left">
+          <span class="tag">BEST ONLINE</span>
+          <h1>
+            PERSONAL<br>
+            SUBSCRIPTION
+          </h1>
+
+          <p class="trial">
+            Join now for <span>7 days FREE</span> trial
+          </p>
+
+          <p class="desc">
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of
+            using Lorem Ipsum.
+          </p>
+
+          <a href="about-us.html" class="primary-btn">READ MORE ⟶</a>
+
+          <div class="subscription-image">
+            <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/files/003.png?v=1686026748" alt="training">
+          </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="subscription-right">
+          <h3>Contact form:</h3>
+
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name:</label>
+                <input type="text" placeholder="John">
+              </div>
+
+              <div class="form-group">
+                <label>Last Name:</label>
+                <input type="text" placeholder="Dio">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Contact:</label>
+                <input type="text" placeholder="1234567890">
+              </div>
+
+              <div class="form-group">
+                <label>E-mail:</label>
+                <input type="email" placeholder="shop@company.com">
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label>Description:</label>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+
+            <button class="primary-btn">GET CONSULTATIONS</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="bestseller-section">
+      <div class="container-fluid">
+
+        <h2 class="bestseller-title">BESTSELLER PRODUCT</h2>
+
+        <div class="bestseller-wrapper">
+
+          <button class="arrow left" onclick="slideLeft()">❮</button>
+
+          <div class="bestseller-slider" id="dynamicBestsellerSlider">
+            <!-- Dynamic products will be injected here -->
+          </div>
+
+          <button class="arrow right" onclick="slideRight()">❯</button>
+
+        </div>
+      </div>
+    </section>
+    <!-- ===== SUBSCRIPTION FOOTER SECTION START ===== -->
+    <section class="subscription-footer">
+      <div class="container-fluid">
+
+        <div class="footer-grid">
+
+          <!-- LEFT BRAND COLUMN -->
+          <div class="footer-col brand-col">
+            <p class="best-online">BEST ONLINE</p>
+
+            <h2 class="brand-title">
+              PERSONAL <span class="trainer-badge">TRAINER</span><br>
+              SUBSCRIPTION
+            </h2>
+
+            <p class="free-trial">
+              Join now for <span>7 days FREE</span> trial
+            </p>
+
+            <div class="subscribe-box">
+              <input type="email" placeholder="Enter email address...">
+              <button>Subscribe</button>
+            </div>
+          </div>
+
+          <!-- SHOP -->
+          <div class="footer-col">
+            <h4>Shop:</h4>
+            <ul>
+              <li>Search</li>
+              <li><a href="collections.html" style="color:inherit; text-decoration:none;">All Collections</a></li>
+              <li>All Products</li>
+              <li>Compare</li>
+              <li><a href="wishlist.html" style="color:inherit; text-decoration:none;">Wishlist</a></li>
+              <li>My Cart</li>
+            </ul>
+          </div>
+
+          <!-- ACCOUNT -->
+          <div class="footer-col">
+            <h4>Account:</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Faq's</li>
+              <li>Services</li>
+              <li>Shipping & Delivery</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-col">
+            <h4>Share :</h4>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+          <p>© 2026, Personaltrainer WorkDo, Powered by WorkDo.io</p>
+
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.svg" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg"
+              alt="American Express">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+            <img src="https://www.pymnts.com/wp-content/uploads/2014/03/Discover-logo-e1416429693676.jpg"
+              alt="Discover">
+            <img src="https://images.icon-icons.com/2341/PNG/512/diners_payment_method_card_icon_142742.png"
+              alt="RuPay">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ===== SUBSCRIPTION FOOTER SECTION END ===== -->
+
+
+
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <h2>My Cart</h2>
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <span class="item-count">1 ITEMS</span>
+          <span class="cart-drawer-close" id="closeCart">&times;</span>
+        </div>
+      </div>
+      <div class="shipping-notice">
+        <p>Congrats! You are eligible for FREE Shipping</p>
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+          <div class="delivery-icon"><i class="fa-solid fa-truck"></i></div>
+        </div>
+      </div>
+      <div class="cart-drawer-body" id="cartDrawerBody">
+        <div class="cart-item">
+          <div class="item-img-box">
+            <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/files/image10_600x600.png?v=1689144357"
+              alt="Product">
+          </div>
+          <div class="cart-item-info">
+            <h4>Standing Elliptical Cross Trainer</h4>
+            <div class="item-qty-price-row">
+              <div class="qty-control">
+                <button class="minus">-</button>
+                <input type="text" value="1" readonly>
+                <button class="plus">+</button>
+              </div>
+              <span class="cart-item-price">Rs. 3,800.00 INR</span>
+            </div>
+            <button class="fa-regular fa-trash-can cart-item-remove"></button>
+          </div>
+        </div>
+
+        <!-- Footer Icons Moved Into Body -->
+        <div class="footer-icons">
+          <button class="icon-btn"><i class="fa-solid fa-ticket"></i></button>
+          <button class="icon-btn"><i class="fa-solid fa-gift"></i></button>
+        </div>
+
+        <!-- Recommendations Slider -->
+        <div class="recommendations-section">
+          <h3>You may also like</h3>
+          <div class="recommendations-slider-container">
+            <div class="recommendations-track" id="recTrack">
+              <!-- Slide 1 -->
+              <div class="rec-card">
+                <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/image4_600x600.png?v=1689143911"
+                  alt="Sole SE25E">
+                <div class="rec-info">
+                  <h4>Sole SE25E Steel Elliptical...</h4>
+                  <span class="price">Rs. 3,900.00</span>
+                  <a class="details-link">Details</a>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="rec-card">
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_5586cad8-2b41-434b-9d61-24e2c21cbdb4_600x600.png?v=1689143452"
+                  alt="Reach Under Desk">
+                <div class="rec-info">
+                  <h4>Reach Under Desk Elliptic...</h4>
+                  <span class="price">Rs. 3,500.00</span>
+                  <a class="details-link">Details</a>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="rec-card">
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_fbca1d1a-47a7-4880-92a4-85a85c23ee01_600x600.png?v=1689142919"
+                  alt="Elliptical Trainer">
+                <div class="rec-info">
+                  <h4>Elliptical Cross Trainer</h4>
+                  <span class="price">Rs. 4,000.00</span>
+                  <a class="details-link">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="slider-dots" id="recDots">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <div class="dot" data-index="2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-totals">
+          <div class="total-item-group">
+            <span class="total-item-label">Total Item</span>
+            <div class="total-item-val" id="drawerTotalItems">1</div>
+          </div>
+          <div class="subtotal-group" style="text-align: right;">
+            <span class="subtotal-label">Subtotal</span>
+            <div class="subtotal-val" id="drawerSubtotal">Rs. 3,800.00 INR</div>
+          </div>
+        </div>
+        <div class="cart-drawer-actions">
+          <a href="cart.html" class="btn-view-cart">View Cart</a>
+          <a href="checkout.html" class="btn-checkout">Proceed to checkout</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Trainer </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="top-offer">
+    10% Discount On The First Order In Dietary!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar fixed-header">
+
+    <div class="container-fluid">
+
+      <!-- LEFT SIDE: LOGO + NAV LINKS -->
+      <div class="nav-left-section">
+        <!-- LOGO -->
+        <a class="navbar-brand logo-text" href="index.html">
+          <div>TRAINER</div>
+          <div class="logo-sub">PERSONAL</div>
+        </a>
+
+        <!-- MOBILE TOGGLE -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- LEFT NAV LINKS -->
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav nav-links-left ms-auto">
+
+            <!-- PLANS -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#membership">PLANS</a>
+            </li>
+
+            <!-- COLLECTIONS -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="collections.html" data-bs-toggle="dropdown">COLLECTIONS</a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-grid">
+                  <a href="cross-trainer.html" class="mega-item">
+                    <img src="images\colection images\c1.jpg">
+                    <span>CROSS TRAINER</span>
+                  </a>
+                  <a href="gym-equipment.html" class="mega-item">
+                    <img src="images\colection images\c2.jpg">
+                    <span>GYM EQUIPMENT</span>
+                  </a>
+                  
+                  <a href="treadmills.html" class="mega-item">
+                    <img src="images\colection images\c4.jpg">
+                    <span>TREADMILLS</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- PAGES -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">PAGES</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">FAQ's</a></li>
+                <li><a class="dropdown-item" href="#">Services</a></li>
+                <li><a class="dropdown-item" href="#">Shipping & Delivery</a></li>
+                <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+              </ul>
+            </li>
+
+            <!-- TRAINERS -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#trainers">TRAINERS</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-right-section">
+        <ul class="navbar-nav nav-links-right">
+
+        
+        
+
+         
+
+          <!-- ACCOUNT -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="login.html">Log in</a></li>
+              <li><a class="dropdown-item" href="register.html">Create Account</a></li>
+              <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+              <li><a class="dropdown-item" href="#">Compare</a></li>
+            </ul>
+          </li>
+
+          <!-- BOOK BUTTON -->
+          <li class="nav-item">
+            <a href="appointment.html" class="btn btn-book">
+              BOOK HERE <span class="arrow-box"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <!-- CART ICON -->
+          <li class="nav-item">
+            <a href="#" class="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <section class="collection-header-section">
+    <a href="index.html" class="back-link">
+      <div class="icon-circle"><i class="fa-solid fa-arrow-left"></i></div>
+      Back to home
+    </a>
+    <h1>GYM EQUIPMENT <span>(6)</span></h1>
+    <p>Upgrade your home workouts with professional gym equipment. Our selection includes durable benches, weights, and versatile multi-station machines designed for strength and endurance training.</p>
+  </section>
+
+  <!-- COLLECTION MAIN -->
+  <section class="collection-main-layout">
+    <!-- SIDEBAR -->
+    <div class="collection-sidebar">
+      <h2 class="sidebar-title">Filters</h2>
+      
+      <div class="filter-group" id="categoryFilterGroup">
+        <div class="filter-group-title">
+          CATEGORIES <span>-</span>
+        </div>
+        <div class="filter-reset">
+          <span id="productSelectedCount">0 selected</span>
+          <a href="#" onclick="resetProductFilters()">Reset</a>
+        </div>
+        <div id="dynamicCategoryList">
+          <!-- Categories will be loaded here -->
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <div class="filter-group-title">
+          PRICE <span>-</span>
+        </div>
+        <div class="filter-reset">
+          <span>Filter by amount</span>
+        </div>
+        <div class="price-filter" style="padding: 10px 0;">
+            <input type="range" id="priceRange" min="0" max="20000" step="100" style="width: 100%; accent-color: #ccff00;" oninput="updatePriceFilter(this.value)">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-top: 5px;">
+                <span>Rs. 0</span>
+                <span id="priceValue">Rs. 20,000</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="collection-content">
+      <div class="collection-toolbar">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>gym equipment</span>
+        </div>
+        <div class="sort-by">
+          Sort by: 
+          <select>
+            <option>Best selling</option>
+            <option>Featured</option>
+            <option>Alphabetically, A-Z</option>
+            <option>Price, low to high</option>
+            <option>Price, high to low</option>
+            <option>Date, old to new</option>
+            <option>Date, new to old</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="collection-grid" id="dynamicProductGrid" data-category="gym equipment">
+        <!-- CARD 1 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="timer" data-seconds="789607">91:06:10:07</div>
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_251423a5-64f4-443b-acd4-9c4493caee53_306x203.png?v=1689146695">
+              </div>
+              <span class="img-name">Rep Fitness</span>
+              <h5>Competition Bumper...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Rogue Fitness is a prominent brand known for its wide...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,800.00 INR</h6>
+                <button>SOLD OUT →</button>
+              </div>
+            </div>
+        <!-- CARD 2 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_991ce762-7545-4108-8562-45fa1d3593ec_306x203.png?v=1689146249">
+              </div>
+              <span class="img-name">Bowflex SelectTech</span>
+              <h5>Compact Adjustable...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Bowflex SelectTech dumbbells are popular and highly regarded for their...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,300.00 INR <span style="text-decoration: line-through; color: #888; font-size: 11px; margin-left: 5px;">Rs. 3,500.00 INR</span></h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 3 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_cf10ebb4-614a-4eef-8260-72e848324d1a_306x203.png?v=1689145454">
+              </div>
+              <span class="img-name">Rogue Fitness</span>
+              <h5>Barbell with 3 Pairs of...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Look for a standard Olympic barbell, which is the most...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,300.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 4 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_172b7e5c-91ac-4815-bab8-074cada9e318_306x203.png?v=1689145271">
+              </div>
+              <span class="img-name">JAXJOX</span>
+              <h5>2 Smart Barbell Plates</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Smart barbell plates are equipped with sensors that track metrics...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,100.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 5 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-badge-new">New</div>
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img
+                  src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_c5a1762c-396f-402a-96e0-94d3a08f514e_306x203.png?v=1689144888">
+              </div>
+              <span class="img-name">Sunny Health </span>
+              <h5>Adjustable Dumbbell Support</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>The kettlebell is often used in whole-body exercises that...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,800.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 6 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-badge-new">New</div>
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img
+                  src="//personaltrainer-workdo.myshopify.com/cdn/shop/files/1_e6a3cf1d-2856-42d4-a719-79075e7a93ce_306x203.png?v=1689144675">
+              </div>
+              <span class="img-name">Sivan Health</span>
+              <h5>Kettlebells 5-15 Lbs Set</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Kettlebells can be expensive, especially if you are looking for a...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,200.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+      </div>
+      </div>
+    </div>
+  </section>
+<!-- ===== SUBSCRIPTION FOOTER SECTION START ===== -->
+    <section class="subscription-footer">
+      <div class="container-fluid">
+
+        <div class="footer-grid">
+
+          <!-- LEFT BRAND COLUMN -->
+          <div class="footer-col brand-col">
+            <p class="best-online">BEST ONLINE</p>
+
+            <h2 class="brand-title">
+              PERSONAL <span class="trainer-badge">TRAINER</span><br>
+              SUBSCRIPTION
+            </h2>
+
+            <p class="free-trial">
+              Join now for <span>7 days FREE</span> trial
+            </p>
+
+            <div class="subscribe-box">
+              <input type="email" placeholder="Enter email address...">
+              <button>Subscribe</button>
+            </div>
+          </div>
+
+          <!-- SHOP -->
+          <div class="footer-col">
+            <h4>Shop:</h4>
+            <ul>
+              <li>Search</li>
+              <li><a href="collections.html" style="color:inherit; text-decoration:none;">All Collections</a></li>
+              <li>All Products</li>
+              <li>Compare</li>
+              <li>Wishlist</li>
+              <li>My Cart</li>
+            </ul>
+          </div>
+
+          <!-- ACCOUNT -->
+          <div class="footer-col">
+            <h4>Account:</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Faq's</li>
+              <li>Services</li>
+              <li>Shipping & Delivery</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-col">
+            <h4>Share :</h4>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+          <p>© 2026, Personaltrainer WorkDo, Powered by WorkDo.io</p>
+
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg"
+              alt="American Express">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+            <img src="https://www.pymnts.com/wp-content/uploads/2014/03/Discover-logo-e1416429693676.jpg"
+              alt="Discover">
+            <img src="https://images.icon-icons.com/2341/PNG/512/diners_payment_method_card_icon_142742.png"
+              alt="RuPay">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ===== SUBSCRIPTION FOOTER SECTION END ===== -->
+
+
+
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2>My Cart</h2>
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <span class="item-count">1 ITEMS</span>
+        <span class="cart-drawer-close" id="closeCart">&times;</span>
+      </div>
+    </div>
+    <div class="shipping-notice">
+      <p>Congrats! You are eligible for FREE Shipping</p>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+        <div class="delivery-icon"><i class="fa-solid fa-truck"></i></div>
+      </div>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerBody">
+      <div class="cart-item">
+        <div class="item-img-box">
+          <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/files/image10_600x600.png?v=1689144357" alt="Product">
+        </div>
+        <div class="cart-item-info">
+          <h4>Standing Elliptical Cross Trainer</h4>
+          <div class="item-qty-price-row">
+            <div class="qty-control">
+              <button class="minus">-</button>
+              <input type="text" value="1" readonly>
+              <button class="plus">+</button>
+            </div>
+            <span class="cart-item-price">Rs. 3,800.00 INR</span>
+          </div>
+          <button class="fa-regular fa-trash-can cart-item-remove"></button>
+        </div>
+      </div>
+
+      <!-- Footer Icons Moved Into Body -->
+      <div class="footer-icons">
+        <button class="icon-btn"><i class="fa-solid fa-ticket"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-gift"></i></button>
+      </div>
+
+      <!-- Recommendations Slider -->
+      <div class="recommendations-section">
+        <h3>You may also like</h3>
+        <div class="recommendations-slider-container">
+          <div class="recommendations-track" id="recTrack">
+            <!-- Slide 1 -->
+            <div class="rec-card">
+              <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/image4_600x600.png?v=1689143911" alt="Sole SE25E">
+              <div class="rec-info">
+                <h4>Sole SE25E Steel Elliptical...</h4>
+                <span class="price">Rs. 3,900.00</span>
+                <a class="details-link">Details</a>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="rec-card">
+              <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_5586cad8-2b41-434b-9d61-24e2c21cbdb4_600x600.png?v=1689143452" alt="Reach Under Desk">
+              <div class="rec-info">
+                <h4>Reach Under Desk Elliptic...</h4>
+                <span class="price">Rs. 3,500.00</span>
+                <a class="details-link">Details</a>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="rec-card">
+              <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_fbca1d1a-47a7-4880-92a4-85a85c23ee01_600x600.png?v=1689142919" alt="Elliptical Trainer">
+              <div class="rec-info">
+                <h4>Elliptical Cross Trainer</h4>
+                <span class="price">Rs. 4,000.00</span>
+                <a class="details-link">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-dots" id="recDots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-totals">
+        <div class="total-item-group">
+          <span class="total-item-label">Total Item</span>
+          <div class="total-item-val" id="drawerTotalItems">1</div>
+        </div>
+        <div class="subtotal-group" style="text-align: right;">
+          <span class="subtotal-label">Subtotal</span>
+          <div class="subtotal-val" id="drawerSubtotal">Rs. 3,800.00 INR</div>
+        </div>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="cart.html" class="btn-view-cart">View Cart</a>
+        <a href="cart.html" class="btn-checkout">Proceed to checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

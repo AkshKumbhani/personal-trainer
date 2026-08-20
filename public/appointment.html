@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment - Personal Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="top-offer">
+    10% Discount On The First Order In Dietary!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar fixed-header">
+    <div class="container-fluid">
+      <div class="nav-left-section">
+        <a class="navbar-brand logo-text" href="index.html">
+          <div>TRAINER</div>
+          <div class="logo-sub">PERSONAL</div>
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav nav-links-left ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#membership">PLANS</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#trainers">TRAINERS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-right-section">
+        <ul class="navbar-nav nav-links-right">
+      
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="login.html">Log in</a></li>
+              <li><a class="dropdown-item" href="register.html">Create Account</a></li>
+              <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="appointment.html" class="btn btn-book">BOOK HERE <span class="arrow-box"><i
+                  class="fa-solid fa-arrow-right"></i></span></a></li>
+          <li class="nav-item"><a href="javascript:void(0)" class="cart-link" id="cartTrigger"><i
+                class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- APPOINTMENT HERO / MULTI-STEP FORM -->
+  <section class="appointment-hero">
+    <div id="appointmentBg"></div>
+    <div class="container">
+      <div class="step-indicator">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="dot3"></div>
+      </div>
+
+      <!-- STEP 1: SERVICE -->
+      <div class="appointment-form-step active" id="step1">
+        <span class="step-label">Start</span>
+        <h1>GET A APPOINTMENT NOW</h1>
+        <p>A trainer is an individual who specialises in imparting knowledge, providing guidance, and facilitating
+          learning in a specific field or subject.</p>
+
+        <div class="appointment-form-row">
+          <div class="appointment-form-group">
+            <label>Service:</label>
+            <div class="appointment-select-wrapper">
+              <select class="appointment-select" id="apptService">
+                <option>First option (+$15.00)</option>
+                <option>Second option (+$34.00)</option>
+                <option>Third option (+$155.00)</option>
+              </select>
+            </div>
+          </div>
+          <div class="appointment-form-group">
+            <label>Additionals informations:</label>
+            <input type="text" class="appointment-input-dark" placeholder="Add Text">
+          </div>
+          <div class="appointment-form-group">
+            <label>Duration:</label>
+            <div class="form-row align-items-center">
+              <div class="form-col" style="flex: 2;">
+                <div class="appointment-select-wrapper">
+                  <select class="appointment-select" id="apptDuration">
+                    <option>30 min</option>
+                    <option>45 min</option>
+                    <option>60 min</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-col" style="flex: 1;">
+                <button class="btn-next-step" onclick="nextStep(2)">NEXT STEP <i
+                    class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: DATE & HOUR -->
+      <div class="appointment-form-step" id="step2">
+        <span class="step-label">Step 2</span>
+        <h1>PICK YOUR PREFERRED TIME</h1>
+        <p>Select a date and hour that works best for your schedule. Our trainers are available for both early morning
+          energy sessions and evening wind-down cardio.</p>
+
+        <div class="appointment-form-row" style="max-width: 600px;">
+          <div class="form-row">
+            <div class="form-col">
+              <label>Date:</label>
+              <input type="date" class="appointment-input-dark" id="apptDate">
+            </div>
+            <div class="form-col">
+              <label>Delivery hour:</label>
+              <input type="time" class="appointment-input-dark" id="apptTime">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-prev-step" onclick="nextStep(1)"><i class="fa-solid fa-arrow-left"></i> PREVIOUS
+              STEP</button>
+            <button class="btn-next-step" onclick="nextStep(3)">NEXT STEP <i
+                class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: PERSONAL DATA -->
+      <div class="appointment-form-step" id="step3">
+        <span class="step-label">Finish</span>
+        <h1>CONFIRM YOUR BOOKING</h1>
+        <p>Please provide your contact details so we can finalize your appointment. A trainer will reach out to you
+          shortly to confirm the specifics of your session.</p>
+
+        <div class="appointment-form-row" style="max-width: 800px;">
+          <div class="form-row">
+            <div class="form-col">
+              <label>First name:</label>
+              <input type="text" class="appointment-input-dark" placeholder="First name">
+            </div>
+            <div class="form-col">
+              <label>Last name:</label>
+              <input type="text" class="appointment-input-dark" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-col">
+              <label>Email:</label>
+              <input type="email" class="appointment-input-dark" placeholder="shop@company.com">
+            </div>
+            <div class="form-col">
+              <label>Phone number:</label>
+              <input type="tel" class="appointment-input-dark" placeholder="Phone number">
+            </div>
+          </div>
+          <div class="appointment-form-group">
+            <label>Additionals informations:</label>
+            <textarea class="appointment-input-dark" id="apptMessage" rows="3" placeholder="How Can We Help?"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn-prev-step" onclick="nextStep(2)"><i class="fa-solid fa-arrow-left"></i> PREVIOUS
+              STEP</button>
+            <button class="btn-next-step" id="submitAppointment">Make An Appointment <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO POPUP -->
+  <div id="video-popup" class="video-modal">
+    <div class="video-inner">
+      <a href="#" class="close-btn">×</a>
+      <video controls autoplay>
+        <source src="https://cdn.shopify.com/videos/c/o/v/5b7e0487474e49ffa521c9c7372093f8.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- POWER & STRENGTH SECTION -->
+  <section class="power-section">
+    <div class="power-container">
+      <!-- LEFT CONTENT -->
+      <div class="power-left">
+        <h1>POWER & STRENGTH</h1>
+        <h4>Experienced cardio instructor provides instruction.</h4>
+        <p>No matter your fitness level or goals, our cardio workouts are adaptable to suit your needs. Our trainers
+          provide modifications and progressions, ensuring that you can challenge yourself at the right intensity and
+          progress at a pace that is comfortable for you.</p>
+        <ul class="power-list">
+          <li><i class="fa-solid fa-circle-right"></i> Lose unnecessary kilograms.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Increase endurance and strength.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Gain new energy and willingness to train.</li>
+        </ul>
+        <a href="#" class="btn-read-more-dashed">READ MORE <span class="arrow-box"><i
+              class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+      <!-- RIGHT CONTENT -->
+      <div class="power-right">
+        <!-- CARD -->
+        <div class="power-card">
+          <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/002.png?v=1686026624" alt="">
+          <div class="card-content">
+            <span>BEST ONLINE</span>
+            <h3>Kettlebell swings</h3>
+            <p>In our yoga studio, you will find a sense of community and support.</p>
+            <a href="#" class="btn-read-more-double">READ MORE <i class="fa-solid fa-angles-right"></i></a>
+          </div>
+        </div>
+        <!-- VIDEO IMAGE -->
+        <div class="video-box">
+          <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="">
+          <a href="#video-popup" class="play-btn-circle"><i class="fa-solid fa-circle-play"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINER SECTION -->
+  <section class="trainer-section" id="trainers">
+    <div class="trainer-inner">
+      <!-- LEFT : VIDEO -->
+      <div class="trainer-video">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" alt="Medicine ball exercise">
+        <a href="#video-popup" class="play-btn-circle"><i class="fa-solid fa-circle-play"></i></a>
+      </div>
+      <!-- CENTER : IMAGE + TEXT -->
+      <div class="trainer-card">
+        <img
+          src="//personaltrainer-workdo.myshopify.com/cdn/shop/files/blog-img-2_f7a6f9d2-8e11-411a-a63e-c33916afd3f3.png?v=1684997976"
+          alt="Zumba Training">
+        <div class="trainer-card-body">
+          <span class="trainer-tag">BEST ONLINE</span>
+          <h3>Zumba dance routines</h3>
+          <p>Studies have shown that regular exercise is associated with a longer life expectancy and a reduced risk of
+            premature death.</p>
+          <a href="#" class="btn-read-more-double">RESUME LESSONS <i class="fa-solid fa-angles-right"></i></a>
+        </div>
+      </div>
+      <!-- RIGHT : CONTENT -->
+      <div class="trainer-content">
+        <h2>YOGA & PILATES</h2>
+        <h4>Medicine ball exercises</h4>
+        <p>Active individuals have a lower risk of developing chronic conditions such as type 2 diabetes, certain types
+          of cancer, and metabolic syndrome.</p>
+        <ul>
+          <li><i class="fa-solid fa-circle-right"></i> Improved cardiovascular health.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Enhanced flexibility and balance.</li>
+          <li><i class="fa-solid fa-circle-right"></i> Boosted mood and mental well-being.</li>
+        </ul>
+        <a href="#" class="btn-read-more-dashed">READ MORE <span class="arrow-box"><i
+              class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Standard Footer -->
+  <section class="subscription-footer">
+    <div class="container-fluid">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <p class="best-online">BEST ONLINE</p>
+          <h2 class="brand-title">PERSONAL <span class="trainer-badge">TRAINER</span><br>SUBSCRIPTION</h2>
+          <p class="free-trial">Join now for <span>7 days FREE</span> trial</p>
+          <div class="subscribe-box">
+            <input type="email" placeholder="Enter email address...">
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop:</h4>
+          <ul>
+            <li>Search</li>
+            <li><a href="collections.html" style="color:inherit; text-decoration:none;">All Collections</a></li>
+            <li>All Products</li>
+            <li>Compare</li>
+            <li><a href="wishlist.html" style="color:inherit; text-decoration:none;">Wishlist</a></li>
+            <li><a href="cart.html" style="color:inherit; text-decoration:none;">My Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account:</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Faq's</li>
+            <li>Services</li>
+            <li>Shipping & Delivery</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Share :</h4>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026, Personaltrainer WorkDo, Powered by WorkDo.io</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS Logic for Multi-step and Backgrounds -->
+  <script>
+    const images = [
+      "images/appointment-step1.png",
+      "images/appointment-step2.png",
+      "images/appointment-step3.png"
+    ];
+
+    const bg = document.getElementById('appointmentBg');
+    bg.style.backgroundImage = `url('${images[0]}')`;
+
+    window.nextStep = (step) => {
+      // Hide all steps
+      document.querySelectorAll('.appointment-form-step').forEach(s => s.classList.remove('active'));
+      // Show target step
+      document.getElementById('step' + step).classList.add('active');
+      // Update dots
+      document.querySelectorAll('.step-dot').forEach((dot, idx) => {
+        dot.classList.remove('active', 'completed');
+        if (idx + 1 === step) dot.classList.add('active');
+        if (idx + 1 < step) dot.classList.add('completed');
+      });
+      // Update background
+      bg.style.backgroundImage = `url('${images[step - 1]}')`;
+    };
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

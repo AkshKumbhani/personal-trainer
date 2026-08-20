@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Trainer </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="top-offer">
+    10% Discount On The First Order In Dietary!
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar fixed-header">
+
+    <div class="container-fluid">
+
+      <!-- LEFT SIDE: LOGO + NAV LINKS -->
+      <div class="nav-left-section">
+        <!-- LOGO -->
+        <a class="navbar-brand logo-text" href="index.html">
+          <div>TRAINER</div>
+          <div class="logo-sub">PERSONAL</div>
+        </a>
+
+        <!-- MOBILE TOGGLE -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- LEFT NAV LINKS -->
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav nav-links-left ms-auto">
+
+            <!-- PLANS -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#membership">PLANS</a>
+            </li>
+
+            <!-- COLLECTIONS -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="collections.html" data-bs-toggle="dropdown">COLLECTIONS <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-grid">
+                  <a href="cross-trainer.html" class="mega-item">
+                    <img src="images\colection images\c1.jpg">
+                    <span>CROSS TRAINER</span>
+                  </a>
+                  <a href="gym-equipment.html" class="mega-item">
+                    <img src="images\colection images\c2.jpg">
+                    <span>GYM EQUIPMENT</span>
+                  </a>
+                  
+                  <a href="treadmills.html" class="mega-item">
+                    <img src="images\colection images\c4.jpg">
+                    <span>TREADMILLS</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- PAGES -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">PAGES <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item" href="#">FAQ's</a></li>
+                <li><a class="dropdown-item" href="#">Services</a></li>
+                <li><a class="dropdown-item" href="#">Shipping & Delivery</a></li>
+                <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+              </ul>
+            </li>
+
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown">BLOG <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+
+            <!-- TRAINERS -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#trainers">TRAINERS</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-right-section">
+        <ul class="navbar-nav nav-links-right">
+
+          
+        
+
+          <!-- ACCOUNT -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown">
+              <i class="fa-solid fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Log in</a></li>
+              <li><a class="dropdown-item" href="#">Create Account</a></li>
+              <li><a class="dropdown-item" href="#">Wishlist</a></li>
+              <li><a class="dropdown-item" href="#">Compare</a></li>
+            </ul>
+          </li>
+
+          <!-- BOOK BUTTON -->
+          <li class="nav-item">
+            <a href="#" class="btn btn-book">
+              BOOK HERE <span class="arrow-box"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <!-- CART ICON -->
+          <li class="nav-item">
+            <a href="#" class="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <section class="collection-header-section">
+    <a href="index.html" class="back-link">
+      <div class="icon-circle"><i class="fa-solid fa-arrow-left"></i></div>
+      Back to home
+    </a>
+    <h1>PROTEIN POWDER <span>(6)</span></h1>
+    <p>Fuel your recovery and muscle growth with our premium protein supplements. We offer a variety of high-quality whey, isolate, and plant-based proteins to support your fitness goals.</p>
+  </section>
+
+  <!-- COLLECTION MAIN -->
+  <section class="collection-main-layout">
+    <!-- SIDEBAR -->
+    <div class="collection-sidebar">
+      <h2 class="sidebar-title">Filters</h2>
+      
+      <div class="filter-group">
+        <div class="filter-group-title">
+          AVAILABILITY <span>-</span>
+        </div>
+        <div class="filter-reset">
+          <span>0 selected</span>
+          <a href="#">Reset</a>
+        </div>
+        <div class="filter-item">
+          <label><input type="checkbox"> In stock</label>
+          <span>(7)</span>
+        </div>
+        <div class="filter-item">
+          <label><input type="checkbox"> Out of stock</label>
+          <span>(1)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="collection-content">
+      <div class="collection-toolbar">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>protein powder</span>
+        </div>
+        <div class="sort-by">
+          Sort by: 
+          <select>
+            <option>Best selling</option>
+            <option>Featured</option>
+            <option>Alphabetically, A-Z</option>
+            <option>Price, low to high</option>
+            <option>Price, high to low</option>
+            <option>Date, old to new</option>
+            <option>Date, new to old</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="collection-grid" id="dynamicProductGrid" data-category="protein powder">
+        <!-- CARD 1 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-badge-new">New</div>
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_25e85f46-7788-468a-b94f-4318c5e62ddb_306x203.png?v=1689157297">
+              </div>
+              <span class="img-name">protein house</span>
+              <h5>Mass Gainer High...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Mass gainer should be used in conjunction with a balanced...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,800.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 2 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_f8589083-d9d3-46bc-923f-e779a95057a6_306x203.png?v=1689156743">
+              </div>
+              <span class="img-name">yfkit</span>
+              <h5>High Protein Bar...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Protein bars are a convenient and easy-to-carry snack that can...</p>
+              <div class="card-bottom">
+                <h6>Rs. 4,300.00 INR <span style="text-decoration: line-through; color: #888; font-size: 11px; margin-left: 5px;">Rs. 4,500.00 INR</span></h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 3 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_846271c7-c7ba-4b55-83f3-f22247fe1a22_306x203.png?v=1689156573">
+              </div>
+              <span class="img-name">airtas</span>
+              <h5>Glutamax Sport...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>A sports drink is a beverage that is specifically formulated to help...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,800.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 4 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_2901ee19-6ae7-4bc6-9043-3efeb7813a34_306x203.png?v=1689156291">
+              </div>
+              <span class="img-name">yfkit</span>
+              <h5>Creatine Monohydrate...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Creatine monohydrate is typically taking as a powder mixed with...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,100.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 5 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img src="https://personaltrainer-workdo.myshopify.com/cdn/shop/files/1_cbd135d9-4809-4ce4-ba91-1cb118f67332_306x203.png?v=1689155985">
+              </div>
+              <span class="img-name">airtas</span>
+              <h5>Super Creatine...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>Creatine works by increasing the amount of phosphocreatine...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,800.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+        <!-- CARD 6 -->
+            <div class="b-card">
+              <div class="img-box">
+                <div class="card-icons">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  <i class="fa-regular fa-eye"></i>
+                </div>
+                <img src="//personaltrainer-workdo.myshopify.com/cdn/shop/files/1_fc546b50-ed60-4965-bcf4-6a0589df6ced_306x203.png?v=1689155554">
+              </div>
+              <span class="img-name">protein house</span>
+              <h5>Pre-Workout Fruit...</h5>
+              <div class="rating">☆☆☆☆☆</div>
+              <p>The goal of a pre-workout supplement is to provide the body with...</p>
+              <div class="card-bottom">
+                <h6>Rs. 3,200.00 INR</h6>
+                <button>ADD TO CART →</button>
+              </div>
+            </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+<!-- ===== SUBSCRIPTION FOOTER SECTION START ===== -->
+    <section class="subscription-footer">
+      <div class="container-fluid">
+
+        <div class="footer-grid">
+
+          <!-- LEFT BRAND COLUMN -->
+          <div class="footer-col brand-col">
+            <p class="best-online">BEST ONLINE</p>
+
+            <h2 class="brand-title">
+              PERSONAL <span class="trainer-badge">TRAINER</span><br>
+              SUBSCRIPTION
+            </h2>
+
+            <p class="free-trial">
+              Join now for <span>7 days FREE</span> trial
+            </p>
+
+            <div class="subscribe-box">
+              <input type="email" placeholder="Enter email address...">
+              <button>Subscribe</button>
+            </div>
+          </div>
+
+          <!-- SHOP -->
+          <div class="footer-col">
+            <h4>Shop:</h4>
+            <ul>
+              <li>Search</li>
+              <li><a href="collections.html" style="color:inherit; text-decoration:none;">All Collections</a></li>
+              <li>All Products</li>
+              <li>Compare</li>
+              <li>Wishlist</li>
+              <li>My Cart</li>
+            </ul>
+          </div>
+
+          <!-- ACCOUNT -->
+          <div class="footer-col">
+            <h4>Account:</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Faq's</li>
+              <li>Services</li>
+              <li>Shipping & Delivery</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="footer-col">
+            <h4>Share :</h4>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+          <p>© 2026, Personaltrainer WorkDo, Powered by WorkDo.io</p>
+
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg"
+              alt="American Express">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+            <img src="https://www.pymnts.com/wp-content/uploads/2014/03/Discover-logo-e1416429693676.jpg"
+              alt="Discover">
+            <img src="https://images.icon-icons.com/2341/PNG/512/diners_payment_method_card_icon_142742.png"
+              alt="RuPay">
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ===== SUBSCRIPTION FOOTER SECTION END ===== -->
+
+
+
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

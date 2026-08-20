@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Personal Trainer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo-text">
+                <div>TRAINER</div>
+                <div class="logo-sub">PERSONAL</div>
+            </a>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active" data-target="dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+            <li data-target="appointments"><i class="fa-solid fa-calendar-check"></i> Appointments</li>
+            <li data-target="trainers"><i class="fa-solid fa-dumbbell"></i> Trainers</li>
+            <li data-target="plans"><i class="fa-solid fa-membership-card"></i> Plans</li>
+            <li data-target="products"><i class="fa-solid fa-box"></i> Products</li>
+            <li data-target="users"><i class="fa-solid fa-users"></i> Users</li>
+            <li data-target="messages"><i class="fa-solid fa-envelope"></i> Messages</li>
+            <li><a href="index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 15px;"><i class="fa-solid fa-arrow-left"></i> Back to Site</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="logoutAdmin"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+    </div>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1>Admin Panel</h1>
+            <div class="admin-user-info">
+                <span id="adminName">Loading...</span>
+                <div class="admin-avatar">A</div>
+            </div>
+        </header>
+
+        <section id="dashboardSection" class="admin-section active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>Total Users</h3>
+                        <p id="totalUsers">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-calendar-alt"></i></div>
+                    <div class="stat-info">
+                        <h3>Appointments</h3>
+                        <p id="totalAppointments">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-check-circle"></i></div>
+                    <div class="stat-info">
+                        <h3>Confirmed</h3>
+                        <p id="confirmedAppointments">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="stat-info">
+                        <h3>Pending</h3>
+                        <p id="pendingAppointments">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h2>Recent Appointments</h2>
+                <div class="table-container">
+                    <table id="recentAppointmentsTable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Service</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data injected here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="appointmentsSection" class="admin-section">
+            <h2>All Appointments</h2>
+            <div class="table-container">
+                <table id="allAppointmentsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Service</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="trainersSection" class="admin-section">
+            <div class="section-header">
+                <h2>Manage Trainers</h2>
+                <button class="btn-account" onclick="openTrainerModal()"><i class="fa-solid fa-plus"></i> Add Trainer</button>
+            </div>
+            <div class="table-container">
+                <table id="trainersTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Specialty</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="plansSection" class="admin-section">
+            <div class="section-header">
+                <h2>Membership Plans</h2>
+                <button class="btn-account" onclick="openPlanModal()"><i class="fa-solid fa-plus"></i> Add Plan</button>
+            </div>
+            <div class="table-container">
+                <table id="plansTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Duration</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="productsSection" class="admin-section">
+            <div class="section-header">
+                <h2>Manage Products</h2>
+                <button class="btn-account" onclick="openProductModal()"><i class="fa-solid fa-plus"></i> Add Product</button>
+            </div>
+            <div class="table-container">
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="usersSection" class="admin-section">
+            <h2>Registered Users</h2>
+            <div class="table-container">
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Joined</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="messagesSection" class="admin-section">
+            <h2>Customer Messages</h2>
+            <div class="table-container">
+                <table id="messagesTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>From</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODALS -->
+    <!-- Trainer Modal -->
+    <div id="trainerModal" class="admin-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeTrainerModal()">&times;</span>
+            <h2 id="trainerModalTitle">Add Trainer</h2>
+            <form id="trainerForm" enctype="multipart/form-data">
+                <input type="hidden" id="trainerId" name="id">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="trainerName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Specialty</label>
+                    <input type="text" id="trainerSpecialty" name="specialty" required>
+                </div>
+                <div class="form-group">
+                    <label>Trainer Image</label>
+                    <input type="file" id="trainerImage" name="trainerImage" accept="image/*">
+                    <input type="hidden" id="existingTrainerImage" name="image_url">
+                    <small id="currentTrainerImageLabel" style="display: block; margin-top: 5px; color: #888;"></small>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="trainerDesc" name="description" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-account">Save Trainer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Plan Modal -->
+    <div id="planModal" class="admin-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePlanModal()">&times;</span>
+            <h2 id="planModalTitle">Add Plan</h2>
+            <form id="planForm">
+                <input type="hidden" id="planId">
+                <div class="form-group">
+                    <label>Plan Name</label>
+                    <input type="text" id="planName" required>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number" step="0.01" id="planPrice" required>
+                </div>
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" id="planDuration" placeholder="e.g. Monthly, Yearly" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="planDesc" rows="3" placeholder="Briefly describe what this plan offers"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Features (comma separated)</label>
+                    <textarea id="planFeatures" rows="3" placeholder="e.g. Free Trainer, Diet Plan, 24/7 Access"></textarea>
+                </div>
+                <button type="submit" class="btn-account">Save Plan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="admin-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <h2 id="productModalTitle">Add Product</h2>
+            <form id="productForm" enctype="multipart/form-data">
+                <input type="hidden" id="productId" name="id">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" id="productName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Price (INR)</label>
+                    <input type="number" step="0.01" id="productPrice" name="price" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" id="productCategory" name="category" required>
+                </div>
+                <div class="form-group">
+                    <label>Product Image</label>
+                    <input type="file" id="productImage" name="productImage" accept="image/*">
+                    <input type="hidden" id="existingImage" name="image_url">
+                    <small id="currentImageLabel" style="display: block; margin-top: 5px; color: #888;"></small>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="productDesc" name="description" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-account">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -912,8 +912,11 @@ body {
 
 @media (max-width: 768px) {
   .training-section {
-    padding: 40px 0 60px;
-    margin-top: -200px;
+    /* On a phone the hero is content-led, so cards must begin after its
+       action buttons instead of overlapping the heading and controls. */
+    padding: 48px 0 60px;
+    margin-top: 0;
+    z-index: 1;
   }
 
   .section-title {
@@ -925,8 +928,8 @@ body {
 
 @media (max-width: 480px) {
   .training-section {
-    padding: 30px 0 40px;
-    margin-top: -140px;
+    padding: 40px 0 48px;
+    margin-top: 0;
   }
 
   .section-title {
@@ -5852,17 +5855,21 @@ section,
 
   .hero-buttons {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     max-width: none;
     gap: 10px;
     margin-top: 24px;
   }
 
   .hero-buttons .btn {
-    flex: 1 1 160px;
+    width: 100%;
     text-align: center;
     padding: 12px 14px;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   /* Appointment: never allow the decorative image to cover form controls. */
@@ -6179,10 +6186,6 @@ section,
     --mobile-gutter: 16px;
   }
 
-  .hero-buttons .btn {
-    flex-basis: 100%;
-  }
-
   .step-indicator {
     gap: 10px;
   }
@@ -6229,6 +6232,13 @@ section,
   .hero-section .hero-content {
     width: 100%;
     max-width: 100%;
+    padding-right: var(--mobile-gutter);
+  }
+
+  .hero-section .hero-text,
+  .hero-section .hero-desc {
+    width: calc(100vw - (var(--mobile-gutter) * 2));
+    max-width: calc(100vw - (var(--mobile-gutter) * 2));
   }
 
   .hero-title,

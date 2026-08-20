@@ -5766,3 +5766,514 @@ section,
     letter-spacing: 1px;
   }
 }
+
+/* ============================================================
+   MOBILE COMPONENT REFINEMENTS
+   These rules intentionally sit last: several legacy page styles reuse
+   generic class names, so the responsive behaviour must be scoped by page.
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    --mobile-gutter: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: var(--mobile-gutter);
+    padding-right: var(--mobile-gutter);
+  }
+
+  /* Keep the header compact and prevent utility links from escaping right. */
+  .main-navbar .container-fluid {
+    flex-wrap: nowrap;
+  }
+
+  .nav-left-section {
+    min-width: 0;
+  }
+
+  .nav-right-section {
+    flex: 0 0 auto;
+    margin-left: 6px;
+  }
+
+  .nav-links-right {
+    flex-wrap: nowrap;
+  }
+
+  .nav-links-right > .nav-item:not(:last-child) {
+    display: none;
+  }
+
+  .cart-link {
+    padding: 8px 4px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-collapse .nav-links-left {
+    padding: 10px 0 4px;
+  }
+
+  .navbar-collapse .nav-link,
+  .navbar-collapse .dropdown-item {
+    white-space: normal;
+  }
+
+  /* Home: preserve the composition without oversized broken words. */
+  .hero-section {
+    min-height: 0;
+    padding: 72px 0 56px;
+    background-position: 62% center;
+  }
+
+  .hero-content {
+    max-width: none;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(2.15rem, 9vw, 2.7rem) !important;
+    letter-spacing: 0;
+    line-height: 1.08;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero-title .trainer-badge {
+    display: inline-block;
+    margin: 0 0 0 4px;
+    padding: 4px 8px;
+    font-size: .46em;
+    vertical-align: .18em;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-buttons .btn {
+    flex: 1 1 160px;
+    text-align: center;
+    padding: 12px 14px;
+  }
+
+  /* Appointment: never allow the decorative image to cover form controls. */
+  .appointment-hero {
+    min-height: 0;
+    padding: 48px 0 56px;
+  }
+
+  #appointmentBg {
+    display: none;
+  }
+
+  .appointment-hero .container {
+    margin: 0;
+    padding: 0 var(--mobile-gutter);
+  }
+
+  .appointment-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.45rem);
+    line-height: 1.08;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+  }
+
+  .appointment-hero p {
+    font-size: 14px;
+  }
+
+  .appointment-form-row,
+  .appointment-form-step .form-row {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .appointment-form-step .form-col,
+  .appointment-form-step .form-col[style] {
+    width: 100%;
+    flex: none !important;
+  }
+
+  .appointment-select,
+  .appointment-input-dark {
+    min-height: 52px;
+    padding: 13px 15px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    margin-top: 22px;
+  }
+
+  .btn-next-step,
+  .btn-prev-step {
+    width: 100%;
+    min-height: 50px;
+    justify-content: center;
+  }
+
+  /* Collection pages: filters and products read as one column on phones. */
+  .collection-header-section {
+    padding: 36px var(--mobile-gutter) 42px;
+  }
+
+  .collection-header-section .back-link {
+    margin-bottom: 28px;
+  }
+
+  .collection-header-section h1 {
+    font-size: clamp(2rem, 10vw, 2.55rem);
+    line-height: 1.06;
+    letter-spacing: .5px;
+  }
+
+  .collection-header-section h1 span {
+    display: block;
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+
+  .collection-main-layout {
+    padding: 36px var(--mobile-gutter);
+  }
+
+  .collection-sidebar {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+
+  .collection-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .collection-toolbar .sort-by {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .collection-toolbar .sort-by select {
+    max-width: 65%;
+  }
+
+  .collection-grid {
+    gap: 18px;
+  }
+
+  /* Cart / wishlist: retain tables on larger phones but make actions fit. */
+  .cart-page-section,
+  .wishlist-section {
+    padding: 36px 0;
+  }
+
+  .cart-page-title,
+  .wishlist-hero h1 {
+    font-size: clamp(2rem, 10vw, 2.45rem);
+    margin-bottom: 26px;
+  }
+
+  .cart-items-list,
+  .wishlist-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cart-table,
+  .wishlist-table {
+    min-width: 620px;
+  }
+
+  .gift-wrap-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 22px 18px;
+  }
+
+  .gift-wrap-info {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .btn-add-gift,
+  .btn-full-checkout {
+    width: 100%;
+    text-align: center;
+  }
+
+  .special-instructions,
+  .summary-box {
+    padding: 20px 16px;
+  }
+
+  /* Account forms: full-width fields and clear, readable action buttons. */
+  .account-page-section {
+    margin-top: 0;
+    padding: 38px 0;
+  }
+
+  .account-page-title {
+    color: #000;
+    font-size: 30px;
+    margin: 20px 0;
+  }
+
+  .account-form-wrapper {
+    border-color: #ddd;
+  }
+
+  .account-form-header {
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+  }
+
+  .account-form-footer,
+  .no-account-prompt {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .account-form-footer .btn-account,
+  .no-account-prompt .btn-account {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .forgot-link {
+    text-align: center;
+  }
+
+  /* About, article, contact and long-form content. */
+  .about-hero {
+    padding: 48px 0;
+  }
+
+  .about-hero h1,
+  .fitness-classes-section h2,
+  .help-title-section h2,
+  .about-services-section h2,
+  .feature-info h2,
+  .about-feature-info h2 {
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+    line-height: 1.12;
+  }
+
+  .fitness-classes-section,
+  .about-services-section {
+    padding: 56px 0;
+  }
+
+  .about-feature-section,
+  .appointment-details-section {
+    padding: 52px 0;
+  }
+
+  .about-feature-layout,
+  .feature-layout,
+  .feature-layout.reverse {
+    gap: 28px;
+  }
+
+  .about-service-card,
+  .lesson-card {
+    padding: 24px 20px;
+  }
+
+  .article-hero {
+    min-height: 0 !important;
+    padding: 58px 0 52px !important;
+    background-position: center !important;
+  }
+
+  .article-hero::before {
+    background: rgba(0, 0, 0, .7) !important;
+  }
+
+  .article-hero h1 {
+    font-size: clamp(2.15rem, 10.5vw, 2.7rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .article-hero .hero-meta {
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: 10px !important;
+    margin: 18px 0 !important;
+  }
+
+  .article-main {
+    padding: 48px 0;
+  }
+
+  .article-body-content h2,
+  .comments-section h3 {
+    font-size: clamp(1.8rem, 8vw, 2.25rem);
+    line-height: 1.12;
+  }
+
+  .article-blockquote {
+    padding: 55px 0 16px !important;
+    font-size: 18px !important;
+  }
+
+  .comment-item {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .comment-avatar {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    font-size: 20px;
+  }
+
+  .comment-form {
+    padding: 22px 16px;
+    margin-top: 36px;
+  }
+
+  /* Footers and newsletter inputs never force a horizontal scroll. */
+  .subscription-footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-grid {
+    gap: 28px;
+  }
+
+  .brand-title {
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+  }
+
+  .subscribe-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .subscribe-box input,
+  .subscribe-box button {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --mobile-gutter: 16px;
+  }
+
+  .hero-buttons .btn {
+    flex-basis: 100%;
+  }
+
+  .step-indicator {
+    gap: 10px;
+  }
+
+  .step-indicator .step-line {
+    width: 22px;
+  }
+}
+
+/* Last-resort overflow guards for small screens.  Kept separate from the
+   component rules above so legacy desktop declarations cannot reintroduce
+   horizontal clipping. */
+@media (max-width: 767px) {
+  .main-navbar .nav-left-section {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .main-navbar .nav-right-section {
+    display: none !important;
+  }
+
+  .main-navbar .navbar-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 8px 10px;
+  }
+
+  .hero-section .container,
+  .hero-section .row,
+  .appointment-hero .container,
+  .article-hero .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-section .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .hero-section .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-title,
+  .appointment-hero h1,
+  .article-hero h1,
+  .collection-header-section h1,
+  .about-hero h1,
+  .cart-page-title,
+  .wishlist-hero h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  .hero-title {
+    font-size: 30px !important;
+  }
+
+  .hero-title .trainer-badge {
+    display: table;
+    margin: 8px 0 4px;
+    font-size: 16px;
+    transform: none;
+  }
+
+  .appointment-hero h1 {
+    font-size: 30px !important;
+  }
+
+  .article-hero h1 {
+    font-size: 30px !important;
+  }
+
+  .gift-wrap-info,
+  .gift-wrap-info strong,
+  .rec-info,
+  .comment-content {
+    min-width: 0;
+  }
+
+  .gift-wrap-info strong,
+  .rec-info *,
+  .comment-content * {
+    overflow-wrap: anywhere;
+  }
+}

@@ -6199,21 +6199,53 @@ section,
    component rules above so legacy desktop declarations cannot reintroduce
    horizontal clipping. */
 @media (max-width: 767px) {
+  .main-navbar .container-fluid {
+    position: relative;
+    min-height: 54px;
+  }
+
   .main-navbar .nav-left-section {
-    flex: 1 1 100%;
-    width: 100%;
+    flex: 1 1 auto !important;
+    width: 100% !important;
   }
 
   .main-navbar .nav-right-section {
-    display: none !important;
+    display: none;
+  }
+
+  .navbar-collapse .mobile-auth-link {
+    display: flex !important;
+    width: 100%;
+    border-top: 1px solid #333;
+    margin-top: 6px;
+    padding-top: 6px;
+  }
+
+  .navbar-collapse .mobile-auth-link .nav-link {
+    color: #ccff00 !important;
+    font-weight: 700;
   }
 
   .main-navbar .navbar-toggler {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0;
     padding: 8px 10px;
+  }
+
+  .main-navbar .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #333;
   }
 
   .hero-section .container,

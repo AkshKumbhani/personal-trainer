@@ -11,6 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const guestLinks = document.querySelectorAll('.guest-only');
     const userLinks = document.querySelectorAll('.user-only');
     const logoutBtn = document.getElementById('logoutBtn');
+    const mobileMenu = document.querySelector('#mainMenu .nav-links-left');
+
+    // The desktop account dropdown is intentionally compact.  Add clear
+    // text actions to the collapsible phone menu so authentication is always
+    // discoverable on small screens.
+    if (mobileMenu && !mobileMenu.querySelector('.mobile-auth-link')) {
+        const mobileActions = user
+            ? '<li class="nav-item mobile-auth-link"><a class="nav-link" href="#" data-mobile-logout>LOG OUT</a></li>'
+            : '<li class="nav-item mobile-auth-link"><a class="nav-link" href="login.html">LOG IN</a></li><li class="nav-item mobile-auth-link"><a class="nav-link" href="register.html">CREATE ACCOUNT</a></li>';
+        mobileMenu.insertAdjacentHTML('beforeend', mobileActions);
+    }
 
     if (user) {
         if (user.role === 'admin') {
@@ -29,6 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.reload();
         });
     }
+
+    document.querySelectorAll('[data-mobile-logout]').forEach((mobileLogout) => {
+        mobileLogout.addEventListener('click', (event) => {
+            event.preventDefault();
+            localStorage.removeItem('user');
+            localStorage.removeItem('authToken');
+            window.location.reload();
+        });
+    });
 
     // TIMER LOGIC
     const timerElements = document.querySelectorAll('.timer');

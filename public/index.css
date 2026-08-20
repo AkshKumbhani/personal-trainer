@@ -5509,3 +5509,260 @@ body {
 .checkout-page select {
     appearance: auto !important; /* Forces native dropdown arrow for better visibility */
 }
+
+/* ============================================================
+   RESPONSIVE FINISHING LAYER
+   Shared safeguards for every public page (phone, tablet, desktop)
+   ============================================================ */
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+.container,
+.container-fluid,
+section,
+.row,
+[class*="wrapper"],
+[class*="container"] {
+  min-width: 0;
+}
+
+/* Wide tables keep their data readable and scroll inside their own card. */
+.table-container,
+.cart-table-wrapper,
+.wishlist-table-wrapper,
+.checkout-order-summary,
+.order-summary-table {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 991px) {
+  .top-offer {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .main-navbar {
+    padding: 8px 14px;
+  }
+
+  .main-navbar .container-fluid {
+    min-height: 54px;
+  }
+
+  .navbar-brand.logo-text {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    order: 3;
+  }
+
+  .nav-links-left .nav-item {
+    height: auto;
+  }
+
+  .nav-right-section {
+    display: flex;
+    padding: 0;
+    margin-left: 14px;
+  }
+
+  .nav-links-right {
+    gap: 10px;
+  }
+
+  .nav-links-right .nav-item {
+    height: auto;
+  }
+
+  .btn-book {
+    padding: 8px 10px;
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .btn-book .arrow-box {
+    width: 19px;
+    height: 19px;
+  }
+
+  .hero-section,
+  .hero-content,
+  .hero-image,
+  .appointment-wrapper,
+  .checkout-wrapper,
+  .contact-wrapper,
+  .about-wrapper {
+    min-width: 0;
+  }
+
+  .mega-menu {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-navbar .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  .nav-left-section {
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+  .nav-right-section {
+    margin-left: 8px;
+  }
+
+  .nav-links-right .nav-item:first-child {
+    display: none;
+  }
+
+  .btn-book {
+    font-size: 0;
+    padding: 7px;
+  }
+
+  .btn-book .arrow-box {
+    width: 23px;
+    height: 23px;
+  }
+
+  .btn-book .arrow-box i {
+    font-size: 10px;
+  }
+
+  .hero-title,
+  .page-title,
+  .section-title {
+    overflow-wrap: anywhere;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 11vw, 52px);
+    line-height: 1.05;
+  }
+
+  .section-heading,
+  .section-title {
+    font-size: clamp(26px, 8vw, 38px);
+  }
+
+  .mega-grid,
+  .collections-landing-grid,
+  .product-grid,
+  .collection-grid,
+  .trainer-grid,
+  .plans-grid,
+  .membership-grid,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .membership-card,
+  .membership-card[style] {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
+  .appointment-form-row,
+  .form-row,
+  .form-grid,
+  .checkout-form-row {
+    grid-template-columns: 1fr !important;
+    display: grid;
+  }
+
+  .checkout-left,
+  .checkout-right,
+  .appointment-left,
+  .appointment-right {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .cart-drawer,
+  .sidebar-cart,
+  .wishlist-sidebar {
+    width: min(100%, 390px) !important;
+  }
+
+  .modal-content,
+  .account-form-wrapper {
+    width: calc(100% - 24px) !important;
+    max-width: 520px !important;
+    margin: 20px auto !important;
+    padding: 22px 16px !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-bottom .payment-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .main-navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-brand.logo-text {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .logo-sub {
+    letter-spacing: 2px;
+  }
+
+  .top-offer {
+    font-size: 10px;
+  }
+
+  .mega-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .mega-item img {
+    height: 95px;
+  }
+
+  .mega-item span {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
